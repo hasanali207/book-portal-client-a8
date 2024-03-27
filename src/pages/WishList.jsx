@@ -10,11 +10,13 @@ const WishList = () => {
         setBooks(storedBooks)
     },[])
 
-    console.log(books);
+        
+    
     
     return (
         <div className='py-8'>
            
+
            {books.map(book => <WishlistContent key={book.id} book={book}></WishlistContent>)}    
            
         </div>

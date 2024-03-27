@@ -17,27 +17,35 @@ export const saveBooks = book => {
   books.push(book)
   localStorage.setItem('books', JSON.stringify(books))
   toast.success('Book Bookmarked Successfully!')
+
+  return books
 }
+
 
 
 export const getWishlist = () => {
-  let books = []
+  let wishbooks = []
   const storedBlogs = localStorage.getItem('wishlists')
   if (storedBlogs) {
-    books = JSON.parse(storedBlogs)
+    wishbooks = JSON.parse(storedBlogs)
   }
-  return books;
+  return wishbooks;
 }
 export const saveWishlist = book => {
-  let books = getWishlist()
-  const isExist = books.find(b => b.id === book.id)
+  let wishbooks = getWishlist()
+ 
+  const isExist = wishbooks.find(b => b.id === book.id)
   if (isExist) {
     return toast.error('Already Bookmarked!')
   }
-  books.push(book)
+  wishbooks.push(book)
   localStorage.setItem('wishlists', JSON.stringify(books))
   toast.success('Book Bookmarked Successfully!')
+  return wishbooks
 }
+
+
+
 
 
 

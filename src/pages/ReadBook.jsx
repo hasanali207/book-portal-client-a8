@@ -10,7 +10,7 @@ const ReadBook = () => {
         setBooks(storedBooks)
     },[])
 
-    console.log(books);
+    
     
     return (
         <div className='py-8'>
