@@ -1,58 +1,66 @@
 import toast from 'react-hot-toast'
 
+let isBookmarked = false;
+let isWishlisted = false;
+
 export const getBooks = () => {
   let books = []
-  const storedBlogs = localStorage.getItem('books')
-  if (storedBlogs) {
-    books = JSON.parse(storedBlogs)
+  const storedBooks = localStorage.getItem('books')
+  if (storedBooks) {
+    books = JSON.parse(storedBooks)
   }
   return books;
 }
-export const saveBooks = book => {
-  let books = getBooks()
-  const isExist = books.find(b => b.id === book.id)
-  if (isExist) {
-    return toast.error('Already Bookmarked!')
+
+export const saveBook = book => {
+  if(isBookmarked) {
+    return toast.error('Already Bookmarked!');
   }
-  books.push(book)
-  localStorage.setItem('books', JSON.stringify(books))
-  toast.success('Book Bookmarked Successfully!')
 
-  return books
+  const storedBooks = getBooks();
+  const isExist = storedBooks.find(b => b.id === book.id);
+
+  if (isExist) {
+    return toast.error('Already Bookmarked!');
+  }
+
+  const books = [...storedBooks, book];
+  localStorage.setItem('books', JSON.stringify(books));
+  toast.success('Book Bookmarked Successfully!');
+
+  isBookmarked = true;
+  isWishlisted = false;
+
+  return books;
 }
-
-
 
 export const getWishlist = () => {
-  let wishbooks = []
-  const storedBlogs = localStorage.getItem('wishlists')
-  if (storedBlogs) {
-    wishbooks = JSON.parse(storedBlogs)
+  let wishlist = [];
+  const storedWishlist = localStorage.getItem('wishlist');
+  if (storedWishlist) {
+    wishlist = JSON.parse(storedWishlist);
   }
-  return wishbooks;
+  return wishlist;
 }
+
 export const saveWishlist = book => {
-  let wishbooks = getWishlist()
- 
-  const isExist = wishbooks.find(b => b.id === book.id)
-  if (isExist) {
-    return toast.error('Already Bookmarked!')
+  if(isWishlisted) {
+    return toast.error('Already Wishlisted!');
   }
-  wishbooks.push(book)
-  localStorage.setItem('wishlists', JSON.stringify(books))
-  toast.success('Book Bookmarked Successfully!')
-  return wishbooks
+
+  const storedWishlist = getBooks();
+  const isExist = storedWishlist.find(b => b.id === book.id);
+
+  if (isExist) {
+    return toast.error('Already In Bookmark!');
+  }
+
+  const wishlist = [...storedWishlist, book];
+  localStorage.setItem('wishlist', JSON.stringify(wishlist));
+  toast.success('Book added to Wishlist Successfully!');
+
+  isBookmarked = false;
+  isWishlisted = true;
+
+  return wishlist;
 }
-
-
-
-
-
-
-
-// export const deleteBlog = id => {
-//   let blogs = getBlogs()
-//   const remaining = blogs.filter(b => b.id !== id)
-//   localStorage.setItem('blogs', JSON.stringify(remaining))
-//   toast.success('Blog Removed from Bookmark!')
-// }

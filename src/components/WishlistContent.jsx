@@ -11,8 +11,10 @@ const WishlistContent = ({book}) => {
         ratings,
         totalpages,
         yearOfPublishing,
-        publisher
+        publisher, id
       } = book;
+
+      
       return (
         <>
           <div className="min-h-[200px] border p-4 mb-5  border-[#13131326]">
