@@ -14,7 +14,6 @@ import WishList from './pages/WishList.jsx';
 import { Toaster } from 'react-hot-toast';
 import ErrorPage from './components/ErrorPage.jsx';
 import Writer from './pages/Writer.jsx';
-import Upcoming from './pages/Contact.jsx';
 import Contact from './pages/Contact.jsx';
 
 
@@ -27,13 +26,13 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader:()=> fetch('booklist.json'),
+        loader:()=> fetch('/booklist.json'),
               
       },
       {
         path: '/book/:id',
         element: <Book></Book>,
-        loader:()=> fetch('../booklist.json'),
+        loader:()=> fetch('/booklist.json'),
       },
       {
         path:'/listbook',
@@ -56,7 +55,7 @@ const router = createBrowserRouter([
       {
         path:'writer',
         element:<Writer></Writer>,
-        loader:()=> fetch('writerlist.json'),
+        loader:()=> fetch('/writerlist.json'),
       },
       {
         path:'contact',
