@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "J.K. Rowling",
+    "profile_image": "http://imgbb.host/images/MSJhn.jpeg",
+    "birth_year": 1965,
+    "total_books": 7,
+    "best_book": "Harry Potter and the Philosopher's Stone"
+  },
+  {
+    "id": 2,
+    "name": "Stephen King",
+    "profile_image": "http://imgbb.host/images/MS1rx.jpeg",
+    "birth_year": 1947,
+    "total_books": 63,
+    "best_book": "The Shining"
+  },
+  {
+    "id": 3,
+    "name": "J.R.R. Tolkien",
+    "profile_image": "http://imgbb.host/images/MSJhn.jpeg",
+    "birth_year": 1892,
+    "total_books": 37,
+    "best_book": "The Lord of the Rings"
+  },
+  {
+    "id": 4,
+    "name": "Agatha Christie",
+    "profile_image": "http://imgbb.host/images/MSezQ.jpeg",
+    "birth_year": 1890,
+    "total_books": 66,
+    "best_book": "Murder on the Orient Express"
+  },
+  {
+    "id": 5,
+    "name": "George Orwell",
+    "profile_image": "http://imgbb.host/images/MST0e.jpeg",
+    "birth_year": 1903,
+    "total_books": 9,
+    "best_book": "1984"
+  },
+  {
+    "id": 6,
+    "name": "Leo Tolstoy",
+    "profile_image": "http://imgbb.host/images/MSS69.jpeg",
+    "birth_year": 1828,
+    "total_books": 13,
+    "best_book": "War and Peace"
+  },
+  {
+    "id": 7,
+    "name": "Mark Twain",
+    "profile_image": "http://imgbb.host/images/MST0e.jpeg",
+    "birth_year": 1835,
+    "total_books": 28,
+    "best_book": "The Adventures of Huckleberry Finn"
+  },
+  {
+    "id": 8,
+    "name": "Jane Austen",
+    "profile_image": "http://imgbb.host/images/MS1rx.jpeg",
+    "birth_year": 1775,
+    "total_books": 6,
+    "best_book": "Pride and Prejudice"
+  },
+  {
+    "id": 9,
+    "name": "Ernest Hemingway",
+    "profile_image": "http://imgbb.host/images/MS5Zr.jpeg",
+    "birth_year": 1899,
+    "total_books": 22,
+    "best_book": "The Old Man and the Sea"
+  }
+]

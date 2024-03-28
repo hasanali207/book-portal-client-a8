@@ -12,12 +12,16 @@ import Book from './components/Book.jsx';
 import ReadBook from './pages/ReadBook.jsx';
 import WishList from './pages/WishList.jsx';
 import { Toaster } from 'react-hot-toast';
+import ErrorPage from './components/ErrorPage.jsx';
+import Writer from './pages/Writer.jsx';
+import Upcoming from './pages/Upcoming.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage />,
     children:[
       {
         path:'/',
@@ -47,6 +51,15 @@ const router = createBrowserRouter([
       {
         path:'pageread',
         element:<PageRead></PageRead>
+      },
+      {
+        path:'writer',
+        element:<Writer></Writer>,
+        loader:()=> fetch('writerlist.json'),
+      },
+      {
+        path:'upcoming',
+        element:<Upcoming></Upcoming>
       },
     ]
   },

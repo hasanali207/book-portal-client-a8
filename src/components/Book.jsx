@@ -7,7 +7,7 @@ const Book = () => {
   const { id } = useParams();
   const book = books.find((book) => book.id == id);
 
-  const { name, author, cover_image, publisher, yearOfPublishing, totalpages, ratings, tags, review, category } = book;
+  const { name, author, image, publisher, yearOfPublishing, totalpages, ratings, tags, review, category } = book;
 
 const handleReadBook= (book) =>{
   saveBook(book)
@@ -24,7 +24,7 @@ const handleWishlist= (book) =>{
       <div className="">
         <div className="flex py-20 flex-col lg:flex-row   gap-6">
           <div className="bg-graybg w-1/2 flex justify-center items-center p-6">
-            <img src={cover_image} className="rounded-lg shadow-2xl " />
+            <img src={image} className="rounded-lg shadow-2xl " />
           </div>
           <div className="py-6">
             
