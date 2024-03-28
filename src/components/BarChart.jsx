@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
@@ -61,13 +61,12 @@ const TriangleBar = (props) => {
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 
-const BarCharts = () => {
-    return (
-        <div>
-            <BarChart
-      width={600}
+export default function App() {
+  return (
+    <BarChart
+      width={500}
       height={300}
-      data={data}
+      data={data} 
       margin={{
         top: 20,
         right: 30,
@@ -84,8 +83,7 @@ const BarCharts = () => {
         ))}
       </Bar>
     </BarChart>
-        </div>
-    );
-};
+  );
+}
 
-export default BarCharts;
+App.demoUrl = 'https://codesandbox.io/s/bar-chart-with-customized-shape-dusth';
