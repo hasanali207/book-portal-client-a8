@@ -21,7 +21,7 @@ const Nav = () => {
           <NavLink className={({isActive})=>isActive? ' text-green font-semibold text-xl  p-2 text-gray border rounded-lg border-[#23BE0A]': ' text-xl font-semibold p-2 text-gray text-black'} to='/listbook'>Listed Book</NavLink>
           <NavLink className={({isActive})=>isActive? 'text-green font-semibold text-xl  p-2 text-gray border rounded-lg border-[#23BE0A]': ' text-xl font-semibold p-2 text-gray text-black'} to='/pageread'>Page Read</NavLink>
           <NavLink className={({isActive})=>isActive? 'text-green font-semibold text-xl  p-2 text-gray border rounded-lg border-[#23BE0A]': ' text-xl font-semibold p-2 text-gray text-black'} to='/writer'>Writer</NavLink>
-          <NavLink className={({isActive})=>isActive? 'text-green font-semibold text-xl  p-2 text-gray border rounded-lg border-[#23BE0A]': ' text-xl font-semibold p-2 text-gray text-black'} to='/upcoming'>Upcoming</NavLink>
+          <NavLink className={({isActive})=>isActive? 'text-green font-semibold text-xl  p-2 text-gray border rounded-lg border-[#23BE0A]': ' text-xl font-semibold p-2 text-gray text-black'} to='/contact'>Contact</NavLink>
                             
           </ul>
         </div>

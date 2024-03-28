@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import BarCharts from '../components/BarChart';
+import BarCharts from '../components/BarCharts';
 
 const PageRead = () => {
   const [books, setBooks] = useState([]);
@@ -14,7 +14,7 @@ const PageRead = () => {
   return (
     <div className='flex justify-center items-center py-6'>
       
-        <BarCharts book={books}  />
+        <BarCharts  />
    
     </div>
   );

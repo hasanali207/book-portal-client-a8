@@ -14,7 +14,8 @@ import WishList from './pages/WishList.jsx';
 import { Toaster } from 'react-hot-toast';
 import ErrorPage from './components/ErrorPage.jsx';
 import Writer from './pages/Writer.jsx';
-import Upcoming from './pages/Upcoming.jsx';
+import Upcoming from './pages/Contact.jsx';
+import Contact from './pages/Contact.jsx';
 
 
 const router = createBrowserRouter([
@@ -58,8 +59,8 @@ const router = createBrowserRouter([
         loader:()=> fetch('writerlist.json'),
       },
       {
-        path:'upcoming',
-        element:<Upcoming></Upcoming>
+        path:'contact',
+        element:<Contact></Contact>
       },
     ]
   },
