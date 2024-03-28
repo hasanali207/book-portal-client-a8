@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaRegStar } from "react-icons/fa6";
 import Book from "./Book";
 
@@ -9,7 +9,7 @@ const Books = ({ item }) => {
     const {name, author, image, publisher, ratings, tags, id, category} = item
   return (
     
-      <NavLink to={`/book/${id}`} onClick={Book} className="bg-base-100 border border-[#13131326] p-4">
+      <Link to={`/book/${id}`} onClick={Book} className="bg-base-100 border border-[#13131326] p-4">
         <figure className="bg-graybg flex items-center justify-center p-6 py-8 rounded-xl">
           <img
             src={image}
@@ -36,7 +36,7 @@ const Books = ({ item }) => {
           </div>
         </div>
         
-      </NavLink>
+      </Link>
     
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import ReadContent from '../components/ReadContent';
 import { getBooks } from '../utils';
 

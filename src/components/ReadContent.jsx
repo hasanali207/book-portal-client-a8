@@ -2,6 +2,8 @@ import React from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
 import { FaBookReader } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Book from "./Book";
 
 
 const ReadContent = ({ book }) => {
@@ -14,7 +16,7 @@ const ReadContent = ({ book }) => {
     ratings,
     totalpages,
     yearOfPublishing,
-    publisher
+    publisher, id
   } = book;
   return (
     <>
@@ -65,7 +67,9 @@ const ReadContent = ({ book }) => {
               <h2 className="bg-[#ffac3326] rounded-xl p-2 text-sm text-[#ffac33] font-medium ">
                 {ratings}
               </h2>
+              <Link to={`/book/${id}`} onClick={Book}>
               <button className="btn bg-green rounded-3xl text-xl text-white">View Details</button>
+              </Link>
             </div>
           </div>
         </div>

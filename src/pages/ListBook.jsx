@@ -11,7 +11,7 @@ const ListBook = () => {
         <h1 className="text-center font-bold text-3xl ">List of Book</h1>
       </div>
         
-      <div className="flex items-center mt-[70px] -mx-4 overflow-x-auto overflow-y-hidden   flex-nowrap dark:bg-gray-100 dark:text-gray-800 border-[#13131326]  border-b w-full mx-auto">
+      <div className="flex items-center mt-[70px] overflow-x-auto overflow-y-hidden   flex-nowrap dark:bg-gray-100 dark:text-gray-800 border-[#13131326]  border-b w-full mx-auto">
         <Link
           to={``}
           onClick={() => setTabIndex(0)}
@@ -53,7 +53,7 @@ const ListBook = () => {
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
           </svg>
-          <span>WishlistBook</span>
+          <span>Wishlist Book</span>
         </Link>
         
      </div>
