@@ -32,10 +32,11 @@ useEffect(() => {
     
     return (
         <div className='py-8'>
-            <div className="mb-4 absolute top-[170px] left-[40%]">
-                <label htmlFor="sort">Sort By: </label>
-                <select id="sort" value={sortOption} onChange={handleSortChange}>
+            <div className="mb-4 absolute top-[30%] left-1/2 transform -translate-x-1/2  ">
+                <label htmlFor="sort"></label>
+                <select className='text-center rounded-xl p-2 py-3 bg-green mt-8 text-xl text-white' id="sort" value={sortOption} onChange={handleSortChange}>
                     
+                    <option selected>Sort</option>
                     <option value="ratings">ratings</option>
                     <option value="totalpages">totalpages</option>
                     <option value="yearOfPublishing">yearOfPublishing</option>
