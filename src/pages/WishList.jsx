@@ -45,7 +45,8 @@ useEffect(() => {
                 </select>
             </div>
 
-           {sortedBooks.map(book => <WishlistContent key={book.id} book={book}></WishlistContent>)}    
+           <div className='p-4 lg:p-0'>
+           {sortedBooks.map(book => <WishlistContent key={book.id} book={book}></WishlistContent>)}  </div>  
            
         </div>
     );

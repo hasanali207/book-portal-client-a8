@@ -43,7 +43,11 @@ const ReadBook = () => {
                     {/* Add more sorting options as needed */}
                 </select>
             </div>
-            {sortedBooks.map(book => <ReadContent key={book.id} book={book}></ReadContent>)}    
+           <div className='p-4 lg:p-0'>
+            
+            
+           {sortedBooks.map(book => <ReadContent key={book.id} book={book}></ReadContent>)} 
+            </div>   
 
 
             

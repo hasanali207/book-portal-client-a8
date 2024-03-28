@@ -6,9 +6,9 @@ const Home = () => {
 
   return (
     <>
-      <section className="  bg-graybg rounded-2xl">
-        <div className="flex p-20 flex-col lg:flex-row h-full-screen items-center  gap-6 justify-between">
-          <div>
+      <section className="  p-4 lg:p-0">
+        <div className="flex p-20 bg-graybg rounded-2xl flex-col lg:flex-row h-full-screen items-center  gap-6 justify-between">
+          <div className="p-4 lg:p-0">
             <h1 className="text-5xl font-bold text-text-primary">
               Books to freshe
             </h1>
